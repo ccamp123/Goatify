@@ -1,0 +1,5 @@
+package interface
+
+func interface()  {
+	
+}
