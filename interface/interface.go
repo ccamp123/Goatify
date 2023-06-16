@@ -1,5 +1,0 @@
-package interface
-
-func interface()  {
-	
-}
