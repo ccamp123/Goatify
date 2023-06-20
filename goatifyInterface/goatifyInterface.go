@@ -1,9 +1,8 @@
 package goatifyInterface
 
 import (
-	"os",
-	"fmt",
 	"io"
+	"os"
 )
 
 func check(err error) {
@@ -12,10 +11,10 @@ func check(err error) {
 	}
 }
 
-func openMessageFile(index string) io.TeeReader {
+func openMessageFile(index string) io.Reader {
 	var filePath string = "./messages/" + index + ".txt"
-	var messageFile os.File* 
-	messageFile,err := os.Open(filePath)
+	var messageFile *os.File
+	messageFile, err := os.Open(filePath)
 	check(err)
-	 
+	var messageReader = io.Reader(messageFile)
 }
